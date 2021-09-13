@@ -1,6 +1,15 @@
 @import "colors";
 @import "fonts";
+@import "keyframes";
 @import "mixins";
+
+@import "header";
+@import "1title";
+@import "2features";
+@import "3download";
+@import "4faq";
+@import "5join";
+@import "footer";
 
 
 *{
@@ -10,6 +19,75 @@
 
 }
 
-body{
+h1, h2, h3 ,p, a,button{
     font-family: 'Rubik', sans-serif; //  4 5
+
+}
+
+h1, h2, h3{
+    font-weight: 500;
+}
+
+p{
+    color: $grayishBlue;
+    font-weight: 400;
+    line-height: 1.625rem;
+    font-size: 0.95rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+button{
+    font-weight: 500;
+}
+
+.displayNone{
+    display: none;
+}
+
+.overflowHidden{
+    overflow: hidden;
+}
+
+.fadeIn{
+    animation: fadeIn 1s forwards;
+}
+
+.fadeOut{
+    animation: fadeOut 1s forwards;
+}
+
+.titleBox{
+    text-align: center;
+
+    h1, h2, p{
+        margin-top: 2rem;
+    }
+}
+
+#backdrop{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: $veryDarkBlue;
+    opacity: 0.95;
+}
+
+
+body{
+
+    position: relative;
+    overflow-x: hidden;
 }

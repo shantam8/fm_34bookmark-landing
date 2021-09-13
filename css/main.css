@@ -1,1 +1,467 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@-webkit-keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+header .bgHelper {
+  padding: 2rem 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  position: relative;
+  z-index: 15;
+}
+
+header .logo.white svg g path {
+  fill: white;
+}
+
+header .logo.white svg g g circle {
+  fill: white;
+}
+
+header .logo.white svg g g path {
+  fill: #252b46;
+}
+
+header #btnToggleMobileMenu {
+  position: relative;
+  width: 16px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../images/icon-hamburger.svg");
+  z-index: 15;
+}
+
+header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
+  cursor: pointer;
+}
+
+header #headerNavBar {
+  padding: 2rem 2rem;
+  position: absolute;
+  content: "";
+  top: 5rem;
+  left: 0;
+  right: 0;
+  z-index: 15;
+}
+
+header #headerNavBar ul li {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-top: 1px solid #9194a1;
+}
+
+header #headerNavBar ul li:last-of-type {
+  border-bottom: 1px solid #9194a1;
+}
+
+header #headerNavBar a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  padding: 1rem;
+  color: white;
+  font-size: 1.3rem;
+}
+
+header #headerNavBar a:hover, header #headerNavBar a:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+header #headerNavBar a:active {
+  color: red;
+}
+
+header #headerNavBar #btnLogIn {
+  border-radius: 4px;
+  border: none;
+  padding: 1rem 1rem;
+  background-color: transparent;
+  color: white;
+  -webkit-box-shadow: 0 0 8px 2px transparent;
+          box-shadow: 0 0 8px 2px transparent;
+  margin-top: 2rem;
+  padding: 0.8rem 0;
+  width: 100%;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 2px solid white;
+}
+
+header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
+  outline: 1px solid green;
+}
+
+header #headerNavBar #btnLogIn:active {
+  background-color: greenyellow;
+}
+
+#title .bgHelper {
+  padding: 2rem 2rem;
+}
+
+#title .image {
+  width: 100%;
+}
+
+#title img {
+  width: 100%;
+}
+
+#title .btnBlock {
+  width: 100%;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+#title #btnGetForChrome {
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  padding: 1rem 1rem;
+  background-color: #5368df;
+  color: white;
+  -webkit-box-shadow: 0 0 8px 2px #5368df;
+          box-shadow: 0 0 8px 2px #5368df;
+}
+
+#title #btnGetForChrome:hover, #title #btnGetForChrome:focus {
+  outline: 1px solid green;
+}
+
+#title #btnGetForChrome:active {
+  background-color: greenyellow;
+}
+
+#title #btnGetForFirefox {
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  padding: 1rem 1rem;
+  background-color: lightgrey;
+  color: black;
+  -webkit-box-shadow: 0 0 8px 2px lightgrey;
+          box-shadow: 0 0 8px 2px lightgrey;
+}
+
+#title #btnGetForFirefox:hover, #title #btnGetForFirefox:focus {
+  outline: 1px solid green;
+}
+
+#title #btnGetForFirefox:active {
+  background-color: greenyellow;
+}
+
+#features .bgHelper {
+  padding: 2rem 2rem;
+}
+
+#features #tabMenu {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#features #tabMenu h3 {
+  position: relative;
+  padding: 1rem;
+  border-top: 1px solid lightgray;
+  font-weight: 400;
+}
+
+#features #tabMenu h3:last-of-type {
+  border-bottom: 1px solid lightgray;
+}
+
+#features #tabMenu h3.active::after {
+  position: absolute;
+  content: "";
+  background-color: #fa5757;
+  left: 5rem;
+  right: 5rem;
+  bottom: 0;
+  height: 0.2rem;
+}
+
+#features #tabMenu h3:hover, #features #tabMenu h3:focus {
+  font-weight: 500;
+}
+
+#features #tabContent {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#features #tabContent img {
+  width: 100%;
+}
+
+#features #tabContent .textBlock {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#features #tabContent .textBlock p {
+  margin-top: 1rem;
+}
+
+#download .bgHelper {
+  padding: 2rem 2rem;
+}
+
+#download .card {
+  position: relative;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+  -webkit-box-shadow: 0 5px 15px -1px lightgray;
+          box-shadow: 0 5px 15px -1px lightgray;
+}
+
+#download .card::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: 7rem;
+  background-image: url("../images/bg-dots.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#download .card h3 {
+  margin-top: 2rem;
+}
+
+#download .card p {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+}
+
+#download button {
+  border-radius: 4px;
+  border: none;
+  padding: 1rem 1rem;
+  background-color: #5368df;
+  color: white;
+  -webkit-box-shadow: 0 0 8px 2px #5368df;
+          box-shadow: 0 0 8px 2px #5368df;
+  margin-top: 4rem;
+  width: 100%;
+}
+
+#download button:hover, #download button:focus {
+  outline: 1px solid green;
+}
+
+#download button:active {
+  background-color: greenyellow;
+}
+
+#faq .bgHelper {
+  padding: 2rem 2rem;
+}
+
+#faq #faqBlock {
+  margin-top: 3rem;
+}
+
+#faq #faqBlock h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+#faq #faqBlock p {
+  margin-top: 0rem;
+  height: 0;
+  visibility: hidden;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+#faq #faqBlock .questionItem {
+  position: relative;
+  z-index: 2;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+
+#faq #faqBlock .questionItem:hover, #faq #faqBlock .questionItem:focus {
+  cursor: pointer;
+}
+
+#faq #faqBlock .questionItem .questionHeadline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#faq #faqBlock .questionItem.open p {
+  margin-top: 1rem;
+  height: auto;
+  visibility: visible;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, p, a, button {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+p {
+  color: #9194a1;
+  font-weight: 400;
+  line-height: 1.625rem;
+  font-size: 0.95rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+button {
+  font-weight: 500;
+}
+
+.displayNone {
+  display: none;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut 1s forwards;
+          animation: fadeOut 1s forwards;
+}
+
+.titleBox {
+  text-align: center;
+}
+
+.titleBox h1, .titleBox h2, .titleBox p {
+  margin-top: 2rem;
+}
+
+#backdrop {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: #252b46;
+  opacity: 0.95;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=main.css.map */

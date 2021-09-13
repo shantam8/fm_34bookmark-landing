@@ -1,0 +1,49 @@
+#faq {
+  .bgHelper {
+    @include sectionPadding;
+  }
+
+  #faqBlock {
+    margin-top: 3rem;
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin-top: 0rem;
+      height: 0;
+      visibility: hidden;
+      transition: all 5s ease-in-out;
+    }
+
+    .questionItem {
+      position: relative;
+      z-index: 2;
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid lightgray;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+
+      .questionHeadline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &.open {
+        p {
+          margin-top: 1rem;
+          height: auto;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

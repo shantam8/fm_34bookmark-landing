@@ -1,0 +1,86 @@
+header {
+  .bgHelper {
+    @include sectionPadding;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 15;
+
+    &.white {
+      svg g {
+        path {
+          fill: white;
+        }
+        g {
+          circle {
+            fill: white;
+          }
+          path {
+            fill: $veryDarkBlue;
+          }
+        }
+      }
+    }
+  }
+
+  #btnToggleMobileMenu {
+    position: relative;
+    width: 16px;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../images/icon-hamburger.svg");
+    z-index: 15;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+
+  #headerNavBar {
+    @include sectionPadding;
+    position: absolute;
+    content: "";
+    top: 5rem;
+    left: 0;
+    right: 0;
+    z-index: 15;
+
+    ul {
+      li {
+        text-align: center;
+        padding: 0.5rem 0;
+        border-top: 1px solid $grayishBlue;
+
+        &:last-of-type {
+          border-bottom: 1px solid $grayishBlue;
+        }
+      }
+    }
+
+    a {
+      @include navHoverEffects;
+      display: inline-block;
+      padding: 1rem;
+      color: white;
+      font-size: 1.3rem;
+    }
+
+    #btnLogIn {
+      @include btnStyle(transparent, white);
+      margin-top: 2rem;
+      padding: 0.8rem 0;
+      width: 100%;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      border: 2px solid white;
+    }
+  }
+}

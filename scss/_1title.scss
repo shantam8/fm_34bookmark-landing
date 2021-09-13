@@ -1,0 +1,29 @@
+#title {
+  .bgHelper {
+    @include sectionPadding;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .btnBlock {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  #btnGetForChrome {
+    width: 100%;
+    @include btnStyle($softBlue, white);
+  }
+  #btnGetForFirefox {
+    width: 100%;
+    @include btnStyle(lightgrey, black);
+  }
+}

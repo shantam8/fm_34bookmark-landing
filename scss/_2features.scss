@@ -1,0 +1,57 @@
+#features {
+  .bgHelper {
+    @include sectionPadding;
+  }
+
+  #tabMenu {
+    text-align: center;
+    margin-top: 3rem;
+
+    h3 {
+      position: relative;
+      padding: 1rem;
+      border-top: 1px solid lightgray;
+      font-weight: 400;
+
+      &:last-of-type {
+        border-bottom: 1px solid lightgray;
+      }
+
+      &.active {
+        &::after {
+          position: absolute;
+
+          content: "";
+          background-color: $softRed;
+          left: 5rem;
+          right: 5rem;
+          bottom: 0;
+          height: 0.2rem;
+        }
+      }
+
+      &:hover,
+      &:focus {
+font-weight: 500;      }
+    }
+  }
+
+  #tabContent {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    transition: all 0.2s ease-in-out;
+
+    img {
+      width: 100%;
+    }
+
+    .textBlock {
+      text-align: center;
+      margin-top: 2rem;
+
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

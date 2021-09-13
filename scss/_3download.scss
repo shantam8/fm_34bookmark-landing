@@ -1,0 +1,41 @@
+#download {
+  .bgHelper {
+    @include sectionPadding;
+  }
+
+  .cardBox {
+  }
+  .card {
+    position: relative;
+    border-radius: 8px;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px -1px lightgray;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 4px;
+      left: 0;
+      right: 0;
+      bottom: 7rem;
+      background-image: url("../images/bg-dots.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h3 {
+      margin-top: 2rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  button {
+    @include btnStyle($softBlue, white);
+    margin-top: 4rem;
+    width: 100%;
+  }
+}
