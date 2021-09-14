@@ -3,19 +3,50 @@ footer {
   text-align: center;
   .bgHelper {
     @include sectionPadding;
+
+    @media screen and(min-width:60rem) {
+      display: grid;
+      align-items: center;
+      gap: 3rem;
+      justify-items: center;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
+  grid-template-areas: "logo nav . . social";
+    }
   }
 
   .logo {
+    grid-area: logo ;
     svg path {
       fill: white;
+    }
+
+    @media screen and(min-width:60rem) {
+      justify-self: start;
     }
   }
 
   nav {
+    grid-area: nav;
     padding: 1rem;
+    @media screen and(min-width:60rem) {
+      padding: 0;
+    }
   }
+
+  ul{
+    @media screen and(min-width:60rem) {
+    display: flex;
+    gap: 3rem;
+    }
+  }
+
+
   li {
     padding: 1rem;
+    @media screen and(min-width:60rem) {
+      padding: 0;
+    }
 
     a {
       display: inline-block;
@@ -23,15 +54,25 @@ footer {
       height: 100%;
       color: white;
       @include navHoverEffects;
+
+      @media screen and(min-width:60rem) {
+      font-size: 0.9rem;
+      }
     }
   }
 
   .socialMedia {
+    grid-area: social;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100px;
     margin: 0 auto;
+
+    @media screen and (min-width:60rem) {
+      margin: 0;
+      justify-self: end;
+    }
 
     .logo {
       transition: all 0.2s ease-in-out;

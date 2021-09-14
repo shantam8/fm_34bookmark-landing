@@ -3,6 +3,11 @@
     @include sectionPadding;
     text-align: center;
     padding-bottom: 8rem;
+
+    @media screen and(min-width:50rem) {
+      width: 800px;
+      margin: 0 auto;
+    }
   }
 
   #faqBlock {

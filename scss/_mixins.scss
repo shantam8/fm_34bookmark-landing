@@ -1,17 +1,38 @@
 @mixin sectionPadding {
   padding: 2rem 2rem;
+
+  @media screen and (min-width: 30rem) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  @media screen and (min-width: 40rem) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @media screen and (min-width: 50rem) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  @media screen and (min-width: 60rem) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  @media screen and (min-width: 75rem) {
+    width: 75rem;
+    margin: 0 auto;
+  }
 }
 
-@mixin navHoverEffects{
-    transition: all 0.2s ease-in-out;
-    &:hover, &:focus{
-        transform: scale(1.2);
-    }
-    &:active{
-        
-            color: $softRed;
-        
-    }
+@mixin navHoverEffects {
+  transition: all 0.2s ease-in-out;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+  &:active {
+    color: $softRed;
+  }
 }
 
 @mixin btnStyle($bgColor, $fontColor) {
@@ -26,13 +47,15 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    background-color: lighten($bgColor, 10); 
-    box-shadow: 0 0 8px 2px lighten($bgColor, 10);
-
+    background-color: white;
+    box-shadow: none;
+    outline: 2px solid $bgColor;
+    color: $bgColor;
   }
   &:active {
     background-color: $bgColor;
-    box-shadow: 0 0 8px 6px $bgColor;
+   //box-shadow: 0 0 8px 6px $bgColor;
+    color: $fontColor;
+   // outline: 0px solid $bgColor;
   }
 }
-

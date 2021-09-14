@@ -72,6 +72,41 @@ header .bgHelper {
           align-items: center;
 }
 
+@media screen and (min-width: 30rem) {
+  header .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  header .bgHelper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  header .bgHelper {
+    width: 75rem;
+    margin: 0 auto;
+  }
+}
+
 header .logo {
   position: relative;
   z-index: 15;
@@ -103,6 +138,12 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
   cursor: pointer;
 }
 
+@media screen and (min-width: 50rem) {
+  header #btnToggleMobileMenu {
+    display: none;
+  }
+}
+
 header #headerNavBar {
   padding: 2rem 2rem;
   position: absolute;
@@ -113,6 +154,63 @@ header #headerNavBar {
   z-index: 15;
 }
 
+@media screen and (min-width: 30rem) {
+  header #headerNavBar {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header #headerNavBar {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header #headerNavBar {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  header #headerNavBar {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  header #headerNavBar {
+    width: 75rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header #headerNavBar {
+    display: block;
+    position: relative;
+    padding: 0;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  header #headerNavBar {
+    width: unset;
+    margin: unset;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header #headerNavBar ul {
+    gap: 1rem;
+  }
+}
+
 header #headerNavBar ul li {
   text-align: center;
   padding: 0.5rem 0;
@@ -121,6 +219,26 @@ header #headerNavBar ul li {
 
 header #headerNavBar ul li:last-of-type {
   border-bottom: 1px solid #9194a1;
+}
+
+@media screen and (min-width: 50rem) {
+  header #headerNavBar ul li {
+    border: none;
+  }
+  header #headerNavBar ul li:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header #headerNavBar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 header #headerNavBar a {
@@ -139,6 +257,15 @@ header #headerNavBar a:hover, header #headerNavBar a:focus {
 
 header #headerNavBar a:active {
   color: #fa5757;
+}
+
+@media screen and (min-width: 50rem) {
+  header #headerNavBar a {
+    color: black;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    padding: 0;
+  }
 }
 
 header #headerNavBar #btnLogIn {
@@ -164,29 +291,97 @@ header #headerNavBar #btnLogIn {
 
 header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
   cursor: pointer;
-  background-color: rgba(26, 26, 26, 0);
-  -webkit-box-shadow: 0 0 8px 2px rgba(26, 26, 26, 0);
-          box-shadow: 0 0 8px 2px rgba(26, 26, 26, 0);
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px solid transparent;
+  color: transparent;
 }
 
 header #headerNavBar #btnLogIn:active {
   background-color: transparent;
-  -webkit-box-shadow: 0 0 8px 6px transparent;
-          box-shadow: 0 0 8px 6px transparent;
+  color: white;
 }
 
 header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  background-color: transparent;
+  color: white;
 }
 
 header #headerNavBar #btnLogIn:active {
   color: #fa5757;
 }
 
+@media screen and (min-width: 50rem) {
+  header #headerNavBar #btnLogIn {
+    border-radius: 4px;
+    border: none;
+    padding: 1rem 1rem;
+    background-color: #fa5757;
+    color: white;
+    -webkit-box-shadow: 0 0 8px 2px #fa5757;
+            box-shadow: 0 0 8px 2px #fa5757;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    margin-top: 0;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.5rem;
+    letter-spacing: 2px;
+  }
+  header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
+    cursor: pointer;
+    background-color: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: 2px solid #fa5757;
+    color: #fa5757;
+  }
+  header #headerNavBar #btnLogIn:active {
+    background-color: #fa5757;
+    color: white;
+  }
+}
+
 #title .bgHelper {
   padding: 2rem 2rem;
   padding-bottom: 8rem;
+}
+
+@media screen and (min-width: 30rem) {
+  #title .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #title .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #title .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #title .bgHelper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  #title .bgHelper {
+    width: 75rem;
+    margin: 0 auto;
+  }
 }
 
 #title .image {
@@ -221,15 +416,16 @@ header #headerNavBar #btnLogIn:active {
 
 #title #btnGetForChrome:hover, #title #btnGetForChrome:focus {
   cursor: pointer;
-  background-color: #7e8ee7;
-  -webkit-box-shadow: 0 0 8px 2px #7e8ee7;
-          box-shadow: 0 0 8px 2px #7e8ee7;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px solid #5368df;
+  color: #5368df;
 }
 
 #title #btnGetForChrome:active {
   background-color: #5368df;
-  -webkit-box-shadow: 0 0 8px 6px #5368df;
-          box-shadow: 0 0 8px 6px #5368df;
+  color: white;
 }
 
 #title #btnGetForFirefox {
@@ -247,20 +443,56 @@ header #headerNavBar #btnLogIn:active {
 
 #title #btnGetForFirefox:hover, #title #btnGetForFirefox:focus {
   cursor: pointer;
-  background-color: #ededed;
-  -webkit-box-shadow: 0 0 8px 2px #ededed;
-          box-shadow: 0 0 8px 2px #ededed;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px solid lightgrey;
+  color: lightgrey;
 }
 
 #title #btnGetForFirefox:active {
   background-color: lightgrey;
-  -webkit-box-shadow: 0 0 8px 6px lightgrey;
-          box-shadow: 0 0 8px 6px lightgrey;
+  color: black;
 }
 
 #features .bgHelper {
   padding: 2rem 2rem;
   padding-bottom: 8rem;
+}
+
+@media screen and (min-width: 30rem) {
+  #features .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #features .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #features .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #features .bgHelper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  #features .bgHelper {
+    width: 75rem;
+    margin: 0 auto;
+  }
 }
 
 #features #tabMenu {
@@ -318,6 +550,41 @@ header #headerNavBar #btnLogIn:active {
   padding-bottom: 8rem;
 }
 
+@media screen and (min-width: 30rem) {
+  #download .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #download .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #download .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #download .bgHelper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  #download .bgHelper {
+    width: 75rem;
+    margin: 0 auto;
+  }
+}
+
 #download .card {
   position: relative;
   border-radius: 8px;
@@ -365,21 +632,64 @@ header #headerNavBar #btnLogIn:active {
 
 #download button:hover, #download button:focus {
   cursor: pointer;
-  background-color: #7e8ee7;
-  -webkit-box-shadow: 0 0 8px 2px #7e8ee7;
-          box-shadow: 0 0 8px 2px #7e8ee7;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px solid #5368df;
+  color: #5368df;
 }
 
 #download button:active {
   background-color: #5368df;
-  -webkit-box-shadow: 0 0 8px 6px #5368df;
-          box-shadow: 0 0 8px 6px #5368df;
+  color: white;
 }
 
 #faq .bgHelper {
   padding: 2rem 2rem;
   text-align: center;
   padding-bottom: 8rem;
+}
+
+@media screen and (min-width: 30rem) {
+  #faq .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #faq .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #faq .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #faq .bgHelper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  #faq .bgHelper {
+    width: 75rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #faq .bgHelper {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
 
 #faq #faqBlock {
@@ -452,15 +762,16 @@ header #headerNavBar #btnLogIn:active {
 
 #faq button:hover, #faq button:focus {
   cursor: pointer;
-  background-color: #7e8ee7;
-  -webkit-box-shadow: 0 0 8px 2px #7e8ee7;
-          box-shadow: 0 0 8px 2px #7e8ee7;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px solid #5368df;
+  color: #5368df;
 }
 
 #faq button:active {
   background-color: #5368df;
-  -webkit-box-shadow: 0 0 8px 6px #5368df;
-          box-shadow: 0 0 8px 6px #5368df;
+  color: white;
 }
 
 #join {
@@ -475,6 +786,50 @@ header #headerNavBar #btnLogIn:active {
   color: white;
 }
 
+@media screen and (min-width: 30rem) {
+  #join .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #join .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #join .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #join .bgHelper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  #join .bgHelper {
+    width: 75rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #join .bgHelper {
+    width: 23.75rem;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 #join .bgHelper p {
   color: white;
   font-size: 0.8rem;
@@ -485,6 +840,19 @@ header #headerNavBar #btnLogIn:active {
   width: 100%;
   position: relative;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 40rem) {
+  #join .bgHelper form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 1rem;
+    height: 80px;
+  }
 }
 
 #join .bgHelper form #inputStatus {
@@ -541,15 +909,23 @@ header #headerNavBar #btnLogIn:active {
 
 #join .bgHelper form button:hover, #join .bgHelper form button:focus {
   cursor: pointer;
-  background-color: #fb8888;
-  -webkit-box-shadow: 0 0 8px 2px #fb8888;
-          box-shadow: 0 0 8px 2px #fb8888;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px solid #fa5757;
+  color: #fa5757;
 }
 
 #join .bgHelper form button:active {
   background-color: #fa5757;
-  -webkit-box-shadow: 0 0 8px 6px #fa5757;
-          box-shadow: 0 0 8px 6px #fa5757;
+  color: white;
+}
+
+@media screen and (min-width: 40rem) {
+  #join .bgHelper form button {
+    margin-top: 0;
+    height: 48px;
+  }
 }
 
 footer {
@@ -561,16 +937,101 @@ footer .bgHelper {
   padding: 2rem 2rem;
 }
 
+@media screen and (min-width: 30rem) {
+  footer .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  footer .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  footer .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  footer .bgHelper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  footer .bgHelper {
+    width: 75rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  footer .bgHelper {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+    justify-items: center;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo nav . . social";
+  }
+}
+
+footer .logo {
+  grid-area: logo;
+}
+
 footer .logo svg path {
   fill: white;
 }
 
+@media screen and (min-width: 60rem) {
+  footer .logo {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+
 footer nav {
+  grid-area: nav;
   padding: 1rem;
+}
+
+@media screen and (min-width: 60rem) {
+  footer nav {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+  }
 }
 
 footer li {
   padding: 1rem;
+}
+
+@media screen and (min-width: 60rem) {
+  footer li {
+    padding: 0;
+  }
 }
 
 footer li a {
@@ -591,7 +1052,14 @@ footer li a:active {
   color: #fa5757;
 }
 
+@media screen and (min-width: 60rem) {
+  footer li a {
+    font-size: 0.9rem;
+  }
+}
+
 footer .socialMedia {
+  grid-area: social;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,6 +1071,14 @@ footer .socialMedia {
           align-items: center;
   width: 100px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 60rem) {
+  footer .socialMedia {
+    margin: 0;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 
 footer .socialMedia .logo {
