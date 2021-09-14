@@ -1,6 +1,7 @@
 #title {
   .bgHelper {
     @include sectionPadding;
+    padding-bottom: 8rem;
   }
 
   .image {

@@ -1,0 +1,66 @@
+#join {
+  background-color: $softBlue;
+  .bgHelper {
+    @include sectionPadding;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: white;
+
+    p {
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    form {
+      width: 100%;
+      position: relative;
+      margin-top: 2rem;
+
+      #inputStatus {
+        position: relative;
+
+        &.error {
+          border-radius: 8px;
+          background-color: $softRed;
+          height: 5rem;
+          padding: 0.2rem;
+
+          &::before {
+            position: absolute;
+            content: "Whoops, make sure it's an email";
+            left: 0;
+            right: 0;
+            bottom: 0.4rem;
+            font-style: italic;
+            text-align: left;
+            padding-left: 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+
+          &::after {
+            position: absolute;
+            content: url("../images/icon-error.svg");
+            top: 1rem;
+            right: 1rem;
+          }
+        }
+
+        #inputFieldEmail {
+          width: 100%;
+          padding: 1rem;
+          border-radius: 8px;
+          border: none;
+        }
+      }
+
+      button {
+        @include btnStyle($softRed, white);
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

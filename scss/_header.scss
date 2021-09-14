@@ -81,6 +81,15 @@ header {
       text-transform: uppercase;
       letter-spacing: 3px;
       border: 2px solid white;
+      transition: all 0.2s ease-in-out;
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        color: $softRed;
+      }
     }
   }
 }

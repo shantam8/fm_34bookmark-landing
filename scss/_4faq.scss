@@ -1,49 +1,63 @@
 #faq {
   .bgHelper {
     @include sectionPadding;
+    text-align: center;
+    padding-bottom: 8rem;
   }
 
   #faqBlock {
     margin-top: 3rem;
 
-    h3 {
-      font-size: 0.9rem;
-      font-weight: 400;
-    }
-
-    p {
-      margin-top: 0rem;
-      height: 0;
-      visibility: hidden;
-      transition: all 5s ease-in-out;
-    }
-
     .questionItem {
       position: relative;
-      z-index: 2;
-      margin: 0.5rem 0;
       padding: 0.5rem 0;
-      padding-bottom: 1rem;
       border-bottom: 1px solid lightgray;
 
-      &:hover,
-      &:focus {
-        cursor: pointer;
+      h3 {
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+
+      p {
+        display: none;
+        overflow: hidden;
+        max-height: 0px;
+        transition:all 0.2s ease-out;
+        text-align: left;
+      }
+
+      svg{
+        transition: all 0.2s ease-in-out;
+
       }
 
       .questionHeadline {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0.5rem 0;
+        
       }
+      
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+      
+      &.open {       
+        svg {
+          transform: rotate(180deg);
 
-      &.open {
-        p {
-          margin-top: 1rem;
-          height: auto;
-          visibility: visible;
+          path {
+            stroke: red;
+          }
         }
       }
     }
+  }
+
+  button{
+    @include btnStyle($softBlue, white);
+    margin-top: 3rem;
   }
 }

@@ -19,7 +19,7 @@
 
 }
 
-h1, h2, h3 ,p, a,button{
+h1, h2, h3 ,p, a,button, ::before{
     font-family: 'Rubik', sans-serif; //  4 5
 
 }
@@ -68,7 +68,7 @@ button{
 .titleBox{
     text-align: center;
 
-    h1, h2, p{
+    p{
         margin-top: 2rem;
     }
 }

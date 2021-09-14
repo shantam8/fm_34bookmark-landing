@@ -1,6 +1,7 @@
 #features {
   .bgHelper {
     @include sectionPadding;
+    padding-bottom: 8rem;
   }
 
   #tabMenu {

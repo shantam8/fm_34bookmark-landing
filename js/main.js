@@ -9,12 +9,15 @@ let tabMenuH3List = document.querySelector("#tabMenu").querySelectorAll("h3");
 let tabContentList = document
   .querySelector("#tabContent")
   .querySelectorAll(".tab");
+let questionItems = document.querySelectorAll(".questionItem");
 
-  let questionItems = document.querySelectorAll(".questionItem");
+let inputFieldEmail = document.querySelector("#inputFieldEmail");
+let btnContact = document.querySelector("#btnContact");
 
 let isMobileMenuOpen = false;
 let mobileAnimationTimer;
 let tabAnimationTimer;
+let inputFieldTimer;
 let selectedTab = 0;
 
 function toggleMobileMenu() {
@@ -30,6 +33,7 @@ function toggleMobileMenu() {
     btnToggleMobileMenu.style.backgroundImage =
       'url("../images/icon-hamburger.svg")';
     fadeOutMobileNavBar();
+    document.querySelector(".socialMedia").classList.remove("mobileMenu");
   } else {
     // aufmachen
 
@@ -38,6 +42,7 @@ function toggleMobileMenu() {
     btnToggleMobileMenu.style.backgroundImage =
       'url("../images/icon-close.svg")';
     fadeInMobileNavBar();
+    document.querySelector(".socialMedia").classList.add("mobileMenu");
   }
 
   isMobileMenuOpen = !isMobileMenuOpen;
@@ -99,23 +104,78 @@ function openSelectedTab(event) {
   }, 1000);
 }
 
-function toggleFaqQuestion(event){
-  console.log(event.target);
-  event.target.classList.toggle("open");
+function toggleFaqQuestion(event) {
+  let traversing = true;
+  let mySelectedNode = event.target;
+  let mySelectedParagraph;
+  while (traversing) {
+    if (mySelectedNode.classList.contains("questionItem")) {
+      traversing = false;
+      break;
+    } else {
+      mySelectedNode = mySelectedNode.parentNode;
+    }
+  }
+  mySelectedNode.classList.toggle("open");
+
+  mySelectedParagraph = mySelectedNode.querySelector("p");
+
+  if (mySelectedParagraph.style.display === "block") {
+    mySelectedParagraph.style.maxHeight = null;
+    setTimeout(() => {
+      mySelectedParagraph.style.display = "none";
+    }, 200);
+  } else {
+    mySelectedParagraph.style.display = "block";
+    mySelectedParagraph.style.maxHeight =
+      mySelectedParagraph.scrollHeight + "px";
+  }
+}
+
+function checkAndSubmitMail(event) {
+  event.preventDefault();
+
+  if (
+    inputFieldEmail.value &&
+    !inputFieldEmail.parentNode.classList.contains("error")
+  ) {
+    alert("Thank you. " + inputFieldEmail.value + "has been registered. We will contact you soon.");
+  }
+}
+
+function checkInput() {
+  let regex =
+    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
+  if (inputFieldTimer) {
+    clearTimeout(inputFieldTimer);
+    console.log("cleartimeout");
+  }
+
+  inputFieldTimer = setTimeout(() => {
+    console.log("checking");
+    if (!inputFieldEmail.value.match(regex)) {
+      inputFieldEmail.parentNode.classList.add("error");
+    } else {
+      inputFieldEmail.parentNode.classList.remove("error");
+    }
+  }, 1000);
 }
 
 function init() {
-
   btnToggleMobileMenu.addEventListener("click", toggleMobileMenu);
 
   tabMenuH3List.forEach((element) => {
     element.addEventListener("click", openSelectedTab);
   });
 
-  questionItems.forEach((element)=>{
+  questionItems.forEach((element) => {
     element.addEventListener("click", toggleFaqQuestion);
-    
   });
+
+  btnContact.addEventListener("click", checkAndSubmitMail);
+
+  inputFieldEmail.addEventListener("keydown", checkInput);
 }
 
 window.onload = init;

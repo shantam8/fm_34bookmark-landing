@@ -1,0 +1,62 @@
+footer {
+  background-color: $veryDarkBlue;
+  text-align: center;
+  .bgHelper {
+    @include sectionPadding;
+  }
+
+  .logo {
+    svg path {
+      fill: white;
+    }
+  }
+
+  nav {
+    padding: 1rem;
+  }
+  li {
+    padding: 1rem;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: white;
+      @include navHoverEffects;
+    }
+  }
+
+  .socialMedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    margin: 0 auto;
+
+    .logo {
+      transition: all 0.2s ease-in-out;
+
+      svg path {
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
+      }
+
+      &:active {
+        svg path {
+          fill: $softRed;
+        }
+      }
+    }
+
+    &.mobileMenu {
+      position: fixed;
+      bottom: 2rem;
+      z-index: 15;
+      left: 0;
+      right: 0;
+    }
+  }
+}

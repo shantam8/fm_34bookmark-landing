@@ -3,13 +3,13 @@
 }
 
 @mixin navHoverEffects{
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:hover, &:focus{
         transform: scale(1.2);
     }
     &:active{
         
-            color: red;
+            color: $softRed;
         
     }
 }
@@ -21,14 +21,18 @@
   background-color: $bgColor;
   color: $fontColor;
   box-shadow: 0 0 8px 2px $bgColor;
+  transition: 0.2s ease-in-out;
 
   &:hover,
   &:focus {
-    outline: 1px solid green;
+    cursor: pointer;
+    background-color: lighten($bgColor, 10); 
+    box-shadow: 0 0 8px 2px lighten($bgColor, 10);
 
   }
   &:active {
-    background-color: greenyellow;
+    background-color: $bgColor;
+    box-shadow: 0 0 8px 6px $bgColor;
   }
 }
 
