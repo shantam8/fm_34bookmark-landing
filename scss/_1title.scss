@@ -2,10 +2,40 @@
   .bgHelper {
     @include sectionPadding;
     padding-bottom: 8rem;
+
+    @media screen and (min-width: 50rem) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+      padding-right: 2rem;
+      padding-bottom: 4rem;
+      gap: 3rem;
+
+      #btnGetForChrome,
+      #btnGetForFirefox {
+        width: unset;
+        padding: 1rem 1.5rem;
+      }
+    }
+  }
+
+  .titleBox {
+    margin-top: 2rem;
+
+    @media screen and (min-width: 50rem) {
+      width: 85%;
+      margin-top: 0;
+      text-align: left;
+    }
   }
 
   .image {
+    @include bgBlueBarsTop;
+    position: relative;
+    margin: 0 auto;
     width: 100%;
+    max-width: 30rem;
   }
 
   img {
@@ -13,18 +43,19 @@
   }
 
   .btnBlock {
+    display: flex;
     width: 100%;
     margin-top: 2rem;
-    display: flex;
     gap: 1rem;
   }
 
   #btnGetForChrome {
-    width: 100%;
     @include btnStyle($softBlue, white);
-  }
-  #btnGetForFirefox {
     width: 100%;
+  }
+
+  #btnGetForFirefox {
     @include btnStyle(lightgrey, black);
+    width: 100%;
   }
 }

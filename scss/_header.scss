@@ -66,78 +66,81 @@ header {
       width: unset;
       margin: unset;
     }
-    ul {
-      @media screen and (min-width: 50rem) {
-        gap: 1rem;
-      }
+  }
 
-      li {
-        text-align: center;
-        padding: 0.5rem 0;
-        border-top: 1px solid $grayishBlue;
-
-        &:last-of-type {
-          border-bottom: 1px solid $grayishBlue;
-        }
-
-        @media screen and (min-width: 50rem) {
-          border: none;
-          &:last-of-type {
-            border-bottom: none;
-          }
-        }
-      }
-
-      @media screen and (min-width: 50rem) {
-        display: flex;
-        justify-content: center;
-      }
+  ul {
+    @media screen and (min-width: 50rem) {
+      gap: 1rem;
     }
 
-    a {
-      @include navHoverEffects;
-      display: inline-block;
-      padding: 1rem;
+    
+    @media screen and (min-width: 50rem) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  li {
+    padding: 0.5rem 0;
+    border-top: 1px solid $grayishBlue;
+    text-align: center;
+
+    &:last-of-type {
+      border-bottom: 1px solid $grayishBlue;
+    }
+
+    @media screen and (min-width: 50rem) {
+      border: none;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  a {
+    @include navHoverEffects;
+    display: inline-block;
+    padding: 1rem;
+    color: white;
+    font-size: 1.3rem;
+
+    @media screen and (min-width: 50rem) {
+      padding: 0;
+      color: black;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  #btnLogIn {
+    @include btnStyle(transparent, white);
+    margin-top: 2rem;
+    padding: 0.8rem 0;
+    width: 100%;
+    border: 2px solid white;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      background-color: transparent;
       color: white;
-      font-size: 1.3rem;
-
-      @media screen and (min-width: 50rem) {
-        color: black;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-        padding: 0;
-      }
     }
 
-    #btnLogIn {
-      @include btnStyle(transparent, white);
-      margin-top: 2rem;
-      padding: 0.8rem 0;
-      width: 100%;
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      border: 2px solid white;
-      transition: all 0.2s ease-in-out;
+    &:active {
+      color: $softRed;
+    }
 
-      &:hover,
-      &:focus {
-        transform: scale(1.1);
-        background-color: transparent;
-        color: white;
-      }
-
-      &:active {
-        color: $softRed;
-      }
-
-      @media screen and (min-width: 50rem) {
-        @include btnStyle($softRed, white);
-        margin-top: 0;
-        font-size: 0.8rem;
-        padding: 0.5rem 1.5rem;
-        letter-spacing: 2px;
-      }
+    @media screen and (min-width: 50rem) {
+      @include btnStyle($softRed, white);
+      margin-top: 0;
+      padding: 0.5rem 1.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
     }
   }
 }

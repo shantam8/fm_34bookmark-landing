@@ -5,11 +5,13 @@
     opacity: 0;
   }
   1% {
-    display: block;
+    display: -webkit-box;
+    display: flex;
     opacity: 0;
   }
   100% {
-    display: block;
+    display: -webkit-box;
+    display: flex;
     opacity: 1;
   }
 }
@@ -19,22 +21,28 @@
     opacity: 0;
   }
   1% {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     opacity: 0;
   }
   100% {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeOut {
   0% {
-    display: block;
+    display: -webkit-box;
+    display: flex;
     opacity: 1;
   }
   99% {
-    display: block;
+    display: -webkit-box;
+    display: flex;
     opacity: 0;
   }
   100% {
@@ -45,11 +53,15 @@
 
 @keyframes fadeOut {
   0% {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     opacity: 1;
   }
   99% {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     opacity: 0;
   }
   100% {
@@ -102,8 +114,15 @@ header .bgHelper {
 
 @media screen and (min-width: 75rem) {
   header .bgHelper {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  header .bgHelper {
     margin: 0 auto;
+    width: 80rem;
   }
 }
 
@@ -184,8 +203,15 @@ header #headerNavBar {
 
 @media screen and (min-width: 75rem) {
   header #headerNavBar {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  header #headerNavBar {
     margin: 0 auto;
+    width: 80rem;
   }
 }
 
@@ -206,32 +232,13 @@ header #headerNavBar {
 }
 
 @media screen and (min-width: 50rem) {
-  header #headerNavBar ul {
+  header ul {
     gap: 1rem;
   }
 }
 
-header #headerNavBar ul li {
-  text-align: center;
-  padding: 0.5rem 0;
-  border-top: 1px solid #9194a1;
-}
-
-header #headerNavBar ul li:last-of-type {
-  border-bottom: 1px solid #9194a1;
-}
-
 @media screen and (min-width: 50rem) {
-  header #headerNavBar ul li {
-    border: none;
-  }
-  header #headerNavBar ul li:last-of-type {
-    border-bottom: none;
-  }
-}
-
-@media screen and (min-width: 50rem) {
-  header #headerNavBar ul {
+  header ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -241,7 +248,26 @@ header #headerNavBar ul li:last-of-type {
   }
 }
 
-header #headerNavBar a {
+header li {
+  padding: 0.5rem 0;
+  border-top: 1px solid #9194a1;
+  text-align: center;
+}
+
+header li:last-of-type {
+  border-bottom: 1px solid #9194a1;
+}
+
+@media screen and (min-width: 50rem) {
+  header li {
+    border: none;
+  }
+  header li:last-of-type {
+    border-bottom: none;
+  }
+}
+
+header a {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
@@ -250,28 +276,28 @@ header #headerNavBar a {
   font-size: 1.3rem;
 }
 
-header #headerNavBar a:hover, header #headerNavBar a:focus {
+header a:hover, header a:focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-header #headerNavBar a:active {
+header a:active {
   color: #fa5757;
 }
 
 @media screen and (min-width: 50rem) {
-  header #headerNavBar a {
-    color: black;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+  header a {
     padding: 0;
+    color: black;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
   }
 }
 
-header #headerNavBar #btnLogIn {
-  border-radius: 4px;
-  border: none;
+header #btnLogIn {
   padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
   background-color: transparent;
   color: white;
   -webkit-box-shadow: 0 0 8px 2px transparent;
@@ -281,15 +307,15 @@ header #headerNavBar #btnLogIn {
   margin-top: 2rem;
   padding: 0.8rem 0;
   width: 100%;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
   border: 2px solid white;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
+header #btnLogIn:hover, header #btnLogIn:focus {
   cursor: pointer;
   background-color: white;
   -webkit-box-shadow: none;
@@ -298,27 +324,27 @@ header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
   color: transparent;
 }
 
-header #headerNavBar #btnLogIn:active {
+header #btnLogIn:active {
   background-color: transparent;
   color: white;
 }
 
-header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
+header #btnLogIn:hover, header #btnLogIn:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   background-color: transparent;
   color: white;
 }
 
-header #headerNavBar #btnLogIn:active {
+header #btnLogIn:active {
   color: #fa5757;
 }
 
 @media screen and (min-width: 50rem) {
-  header #headerNavBar #btnLogIn {
-    border-radius: 4px;
-    border: none;
+  header #btnLogIn {
     padding: 1rem 1rem;
+    border: none;
+    border-radius: 4px;
     background-color: #fa5757;
     color: white;
     -webkit-box-shadow: 0 0 8px 2px #fa5757;
@@ -326,11 +352,11 @@ header #headerNavBar #btnLogIn:active {
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
     margin-top: 0;
-    font-size: 0.8rem;
     padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
   }
-  header #headerNavBar #btnLogIn:hover, header #headerNavBar #btnLogIn:focus {
+  header #btnLogIn:hover, header #btnLogIn:focus {
     cursor: pointer;
     background-color: white;
     -webkit-box-shadow: none;
@@ -338,7 +364,7 @@ header #headerNavBar #btnLogIn:active {
     outline: 2px solid #fa5757;
     color: #fa5757;
   }
-  header #headerNavBar #btnLogIn:active {
+  header #btnLogIn:active {
     background-color: #fa5757;
     color: white;
   }
@@ -379,13 +405,105 @@ header #headerNavBar #btnLogIn:active {
 
 @media screen and (min-width: 75rem) {
   #title .bgHelper {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  #title .bgHelper {
     margin: 0 auto;
+    width: 80rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #title .bgHelper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+    gap: 3rem;
+  }
+  #title .bgHelper #btnGetForChrome,
+  #title .bgHelper #btnGetForFirefox {
+    width: unset;
+    padding: 1rem 1.5rem;
+  }
+}
+
+#title .titleBox {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 50rem) {
+  #title .titleBox {
+    width: 85%;
+    margin-top: 0;
+    text-align: left;
   }
 }
 
 #title .image {
+  position: relative;
+  margin: 0 auto;
   width: 100%;
+  max-width: 30rem;
+}
+
+#title .image::before {
+  position: absolute;
+  content: "";
+  width: 59rem;
+  height: 11rem;
+  bottom: 1rem;
+  left: 6rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  background-color: #5368df;
+  z-index: -1;
+}
+
+@media screen and (min-width: 30rem) {
+  #title .image::before {
+    height: 14rem;
+    left: 3rem;
+    border-top-left-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #title .image::before {
+    height: 16rem;
+    border-top-left-radius: 8rem;
+    border-bottom-left-radius: 8rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #title .image::before {
+    height: 12rem;
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  #title .image::before {
+    height: 16rem;
+  }
 }
 
 #title img {
@@ -393,25 +511,25 @@ header #headerNavBar #btnLogIn:active {
 }
 
 #title .btnBlock {
-  width: 100%;
-  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  margin-top: 2rem;
   gap: 1rem;
 }
 
 #title #btnGetForChrome {
-  width: 100%;
-  border-radius: 4px;
-  border: none;
   padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
   background-color: #5368df;
   color: white;
   -webkit-box-shadow: 0 0 8px 2px #5368df;
           box-shadow: 0 0 8px 2px #5368df;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  width: 100%;
 }
 
 #title #btnGetForChrome:hover, #title #btnGetForChrome:focus {
@@ -429,16 +547,16 @@ header #headerNavBar #btnLogIn:active {
 }
 
 #title #btnGetForFirefox {
-  width: 100%;
-  border-radius: 4px;
-  border: none;
   padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
   background-color: lightgrey;
   color: black;
   -webkit-box-shadow: 0 0 8px 2px lightgrey;
           box-shadow: 0 0 8px 2px lightgrey;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  width: 100%;
 }
 
 #title #btnGetForFirefox:hover, #title #btnGetForFirefox:focus {
@@ -490,14 +608,50 @@ header #headerNavBar #btnLogIn:active {
 
 @media screen and (min-width: 75rem) {
   #features .bgHelper {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  #features .bgHelper {
+    margin: 0 auto;
+    width: 80rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #features .bgHelper {
+    padding-bottom: 4rem;
+  }
+  #features .bgHelper .titleBox {
+    width: 25rem;
+    margin: 0 auto;
+    border-left: 2rem;
+    border-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  #features .bgHelper {
+    width: 70rem;
     margin: 0 auto;
   }
 }
 
 #features #tabMenu {
-  text-align: center;
   margin-top: 3rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 50rem) {
+  #features #tabMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 41.875rem;
+    margin: 0 auto;
+  }
 }
 
 #features #tabMenu h3 {
@@ -511,38 +665,188 @@ header #headerNavBar #btnLogIn:active {
   border-bottom: 1px solid lightgray;
 }
 
+@media screen and (min-width: 30rem) {
+  #features #tabMenu h3 {
+    width: 26rem;
+    margin: 0 auto;
+    border-top: none;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #features #tabMenu h3 {
+    width: 14rem;
+    margin-top: 2rem;
+    border-top: none;
+    border-bottom: 1px solid lightgray;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #features #tabMenu h3 {
+    font-size: 1rem;
+  }
+}
+
 #features #tabMenu h3.active::after {
   position: absolute;
   content: "";
   background-color: #fa5757;
+  height: 0.2rem;
   left: 5rem;
   right: 5rem;
   bottom: 0;
-  height: 0.2rem;
+}
+
+@media screen and (min-width: 30rem) {
+  #features #tabMenu h3.active::after {
+    left: 9rem;
+    right: 9rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #features #tabMenu h3.active::after {
+    left: 0;
+    right: 0;
+  }
 }
 
 #features #tabMenu h3:hover, #features #tabMenu h3:focus {
+  cursor: pointer;
   font-weight: 500;
 }
 
 #features #tabContent {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  position: relative;
+  max-width: 30rem;
+  margin: 4rem auto;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-#features #tabContent img {
+@media screen and (min-width: 50rem) {
+  #features #tabContent {
+    max-width: unset;
+    margin: 0 auto;
+    height: 416px;
+  }
+}
+
+#features .tab {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 50rem) {
+  #features .tab {
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#features .image {
+  position: relative;
+}
+
+#features .image::before {
+  position: absolute;
+  content: "";
+  width: 60rem;
+  height: 12rem;
+  bottom: -1rem;
+  right: 0rem;
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  background-color: #5368df;
+  z-index: -1;
+}
+
+@media screen and (min-width: 30rem) {
+  #features .image::before {
+    height: 14rem;
+    right: 3rem;
+    border-top-left-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #features .image::before {
+    height: 16rem;
+    border-top-left-radius: 8rem;
+    border-bottom-left-radius: 8rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #features .image::before {
+    height: 12rem;
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+  }
+}
+
+#features img {
   width: 100%;
 }
 
-#features #tabContent .textBlock {
+#features .textBlock {
+  margin-top: 3rem;
   text-align: center;
-  margin-top: 2rem;
 }
 
-#features #tabContent .textBlock p {
+@media screen and (min-width: 50rem) {
+  #features .textBlock {
+    width: 85%;
+    margin-top: 0;
+    padding-left: 5em;
+    text-align: left;
+  }
+}
+
+#features .textBlock p {
   margin-top: 1rem;
+}
+
+#features button {
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #5368df;
+  color: white;
+  -webkit-box-shadow: 0 0 8px 2px #5368df;
+          box-shadow: 0 0 8px 2px #5368df;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  display: initial;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#features button:hover, #features button:focus {
+  cursor: pointer;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px solid #5368df;
+  color: #5368df;
+}
+
+#features button:active {
+  background-color: #5368df;
+  color: white;
 }
 
 #download .bgHelper {
@@ -580,19 +884,71 @@ header #headerNavBar #btnLogIn:active {
 
 @media screen and (min-width: 75rem) {
   #download .bgHelper {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  #download .bgHelper {
     margin: 0 auto;
+    width: 80rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #download .bgHelper {
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  #download .cardBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 68rem) {
+  #download .cardBox {
+    height: 26rem;
   }
 }
 
 #download .card {
   position: relative;
-  border-radius: 8px;
   margin-top: 2rem;
   padding: 2rem;
+  border-radius: 8px;
   text-align: center;
   -webkit-box-shadow: 0 5px 15px -1px lightgray;
           box-shadow: 0 5px 15px -1px lightgray;
+}
+
+@media screen and (min-width: 40rem) {
+  #download .card {
+    width: 16rem;
+    margin-top: 0;
+  }
+  #download .card:nth-child(1) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  #download .card:nth-child(3) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 
 #download .card::after {
@@ -617,9 +973,9 @@ header #headerNavBar #btnLogIn:active {
 }
 
 #download button {
-  border-radius: 4px;
-  border: none;
   padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
   background-color: #5368df;
   color: white;
   -webkit-box-shadow: 0 0 8px 2px #5368df;
@@ -646,8 +1002,8 @@ header #headerNavBar #btnLogIn:active {
 
 #faq .bgHelper {
   padding: 2rem 2rem;
-  text-align: center;
   padding-bottom: 8rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 30rem) {
@@ -680,8 +1036,15 @@ header #headerNavBar #btnLogIn:active {
 
 @media screen and (min-width: 75rem) {
   #faq .bgHelper {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  #faq .bgHelper {
     margin: 0 auto;
+    width: 80rem;
   }
 }
 
@@ -689,6 +1052,7 @@ header #headerNavBar #btnLogIn:active {
   #faq .bgHelper {
     width: 800px;
     margin: 0 auto;
+    padding-bottom: 4rem;
   }
 }
 
@@ -696,61 +1060,61 @@ header #headerNavBar #btnLogIn:active {
   margin-top: 3rem;
 }
 
-#faq #faqBlock .questionItem {
+#faq .questionItem {
   position: relative;
   padding: 0.5rem 0;
   border-bottom: 1px solid lightgray;
 }
 
-#faq #faqBlock .questionItem h3 {
+#faq .questionItem p {
+  display: none;
+  max-height: 0px;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#faq .questionItem:hover, #faq .questionItem:focus {
+  cursor: pointer;
+}
+
+#faq .questionItem.open svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#faq .questionItem.open svg path {
+  stroke: red;
+}
+
+#faq .questionItem h3 {
   font-size: 0.9rem;
   font-weight: 400;
 }
 
-#faq #faqBlock .questionItem p {
-  display: none;
-  overflow: hidden;
-  max-height: 0px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  text-align: left;
-}
-
-#faq #faqBlock .questionItem svg {
+#faq .questionItem svg {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-#faq #faqBlock .questionItem .questionHeadline {
+#faq .questionItem .questionHeadline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0.5rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem 0;
-}
-
-#faq #faqBlock .questionItem:hover, #faq #faqBlock .questionItem:focus {
-  cursor: pointer;
-}
-
-#faq #faqBlock .questionItem.open svg {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-#faq #faqBlock .questionItem.open svg path {
-  stroke: red;
 }
 
 #faq button {
-  border-radius: 4px;
-  border: none;
   padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
   background-color: #5368df;
   color: white;
   -webkit-box-shadow: 0 0 8px 2px #5368df;
@@ -780,10 +1144,10 @@ header #headerNavBar #btnLogIn:active {
 
 #join .bgHelper {
   padding: 2rem 2rem;
-  text-align: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: white;
+  text-align: center;
 }
 
 @media screen and (min-width: 30rem) {
@@ -816,8 +1180,15 @@ header #headerNavBar #btnLogIn:active {
 
 @media screen and (min-width: 75rem) {
   #join .bgHelper {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  #join .bgHelper {
     margin: 0 auto;
+    width: 80rem;
   }
 }
 
@@ -830,20 +1201,20 @@ header #headerNavBar #btnLogIn:active {
   }
 }
 
-#join .bgHelper p {
-  color: white;
+#join p {
   font-size: 0.8rem;
   font-weight: 500;
+  color: white;
 }
 
-#join .bgHelper form {
-  width: 100%;
+#join form {
   position: relative;
+  width: 100%;
   margin-top: 2rem;
 }
 
 @media screen and (min-width: 40rem) {
-  #join .bgHelper form {
+  #join form {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 2fr 1fr;
@@ -855,48 +1226,48 @@ header #headerNavBar #btnLogIn:active {
   }
 }
 
-#join .bgHelper form #inputStatus {
+#join #inputStatus {
   position: relative;
 }
 
-#join .bgHelper form #inputStatus.error {
-  border-radius: 8px;
-  background-color: #fa5757;
+#join #inputStatus.error {
   height: 5rem;
   padding: 0.2rem;
+  border-radius: 8px;
+  background-color: #fa5757;
 }
 
-#join .bgHelper form #inputStatus.error::before {
+#join #inputStatus.error::before {
   position: absolute;
   content: "Whoops, make sure it's an email";
+  padding-left: 1rem;
   left: 0;
   right: 0;
   bottom: 0.4rem;
-  font-style: italic;
   text-align: left;
-  padding-left: 1rem;
   font-size: 0.8rem;
+  font-style: italic;
   font-weight: 500;
 }
 
-#join .bgHelper form #inputStatus.error::after {
+#join #inputStatus.error::after {
   position: absolute;
   content: url("../images/icon-error.svg");
   top: 1rem;
   right: 1rem;
 }
 
-#join .bgHelper form #inputStatus #inputFieldEmail {
+#join #inputFieldEmail {
   width: 100%;
   padding: 1rem;
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
 }
 
-#join .bgHelper form button {
-  border-radius: 4px;
-  border: none;
+#join button {
   padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
   background-color: #fa5757;
   color: white;
   -webkit-box-shadow: 0 0 8px 2px #fa5757;
@@ -907,7 +1278,7 @@ header #headerNavBar #btnLogIn:active {
   margin-top: 1rem;
 }
 
-#join .bgHelper form button:hover, #join .bgHelper form button:focus {
+#join button:hover, #join button:focus {
   cursor: pointer;
   background-color: white;
   -webkit-box-shadow: none;
@@ -916,13 +1287,13 @@ header #headerNavBar #btnLogIn:active {
   color: #fa5757;
 }
 
-#join .bgHelper form button:active {
+#join button:active {
   background-color: #fa5757;
   color: white;
 }
 
 @media screen and (min-width: 40rem) {
-  #join .bgHelper form button {
+  #join button {
     margin-top: 0;
     height: 48px;
   }
@@ -967,8 +1338,15 @@ footer .bgHelper {
 
 @media screen and (min-width: 75rem) {
   footer .bgHelper {
-    width: 75rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  footer .bgHelper {
     margin: 0 auto;
+    width: 80rem;
   }
 }
 
@@ -979,13 +1357,13 @@ footer .bgHelper {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 3rem;
     justify-items: center;
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: "logo nav . . social";
+    gap: 3rem;
   }
 }
 
@@ -1035,12 +1413,12 @@ footer li {
 }
 
 footer li a {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: inline-block;
   width: 100%;
   height: 100%;
   color: white;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 footer li a:hover, footer li a:focus {
@@ -1115,19 +1493,27 @@ footer .socialMedia.mobileMenu {
           box-sizing: border-box;
 }
 
-h1, h2, h3, p, a, button, ::before {
-  font-family: 'Rubik', sans-serif;
+h1,
+h2,
+h3,
+p,
+a,
+button,
+::before {
+  font-family: "Rubik", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 500;
 }
 
 p {
   color: #9194a1;
   font-weight: 400;
-  line-height: 1.625rem;
   font-size: 0.95rem;
+  line-height: 1.625rem;
 }
 
 ul {
@@ -1142,6 +1528,12 @@ a {
 
 button {
   font-weight: 500;
+}
+
+.tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .displayNone {
@@ -1177,9 +1569,9 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 5;
   background-color: #252b46;
   opacity: 0.95;
+  z-index: 5;
 }
 
 body {

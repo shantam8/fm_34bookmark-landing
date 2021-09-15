@@ -1,67 +1,66 @@
 #faq {
   .bgHelper {
     @include sectionPadding;
-    text-align: center;
     padding-bottom: 8rem;
+    text-align: center;
 
     @media screen and(min-width:50rem) {
       width: 800px;
       margin: 0 auto;
+      padding-bottom: 4rem;
     }
   }
 
   #faqBlock {
     margin-top: 3rem;
+  }
 
-    .questionItem {
-      position: relative;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid lightgray;
+  .questionItem {
+    position: relative;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid lightgray;
 
-      h3 {
-        font-size: 0.9rem;
-        font-weight: 400;
-      }
+    p {
+      display: none;
+      max-height: 0px;
+      text-align: left;
+      overflow: hidden;
+      transition: all 0.2s ease-out;
+    }
 
-      p {
-        display: none;
-        overflow: hidden;
-        max-height: 0px;
-        transition:all 0.2s ease-out;
-        text-align: left;
-      }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
 
-      svg{
-        transition: all 0.2s ease-in-out;
+    &.open {
+      svg {
+        transform: rotate(180deg);
 
-      }
-
-      .questionHeadline {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 0;
-        
-      }
-      
-      &:hover,
-      &:focus {
-        cursor: pointer;
-      }
-      
-      &.open {       
-        svg {
-          transform: rotate(180deg);
-
-          path {
-            stroke: red;
-          }
+        path {
+          stroke: red;
         }
       }
     }
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    svg {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .questionHeadline {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      align-items: center;
+    }
   }
 
-  button{
+  button {
     @include btnStyle($softBlue, white);
     margin-top: 3rem;
   }

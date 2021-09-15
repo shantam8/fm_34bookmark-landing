@@ -11,83 +11,90 @@
 @import "5join";
 @import "footer";
 
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2, h3 ,p, a,button, ::before{
-    font-family: 'Rubik', sans-serif; //  4 5
-
+h1,
+h2,
+h3,
+p,
+a,
+button,
+::before {
+  font-family: "Rubik", sans-serif; //  4 5
 }
 
-h1, h2, h3{
-    font-weight: 500;
+h1,
+h2,
+h3 {
+  font-weight: 500;
 }
 
-p{
-    color: $grayishBlue;
-    font-weight: 400;
-    line-height: 1.625rem;
-    font-size: 0.95rem;
+p {
+  color: $grayishBlue;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.625rem;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-button{
-    font-weight: 500;
+button {
+  font-weight: 500;
 }
 
-.displayNone{
-    display: none;
+.tab {
+  display: flex;
 }
 
-.overflowHidden{
-    overflow: hidden;
+.displayNone {
+  display: none;
 }
 
-.fadeIn{
-    animation: fadeIn 1s forwards;
+.overflowHidden {
+  overflow: hidden;
 }
 
-.fadeOut{
-    animation: fadeOut 1s forwards;
+.fadeIn {
+  animation: fadeIn 1s forwards;
 }
 
-.titleBox{
-    text-align: center;
-
-    p{
-        margin-top: 2rem;
-    }
+.fadeOut {
+  animation: fadeOut 1s forwards;
 }
 
-#backdrop{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
-    background-color: $veryDarkBlue;
-    opacity: 0.95;
+.titleBox {
+  text-align: center;
+
+  p {
+    margin-top: 2rem;
+  }
 }
 
+#backdrop {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $veryDarkBlue;
+  opacity: 0.95;
+  z-index: 5;
+}
 
-body{
-
-    position: relative;
-    overflow-x: hidden;
+body {
+  position: relative;
+  overflow-x: hidden;
 }

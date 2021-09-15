@@ -4,23 +4,22 @@
     opacity: 0;
   }
   1% {
-    display: block;
+    display: flex;
     opacity: 0;
   }
   100% {
-    display: block;
+    display: flex;
     opacity: 1;
   }
 }
 
-
 @keyframes fadeOut {
   0% {
-    display: block;
+    display: flex;
     opacity: 1;
   }
   99% {
-    display: block;
+    display: flex;
     opacity: 0;
   }
   100% {
