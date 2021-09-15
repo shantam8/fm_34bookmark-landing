@@ -163,7 +163,7 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
   }
 }
 
-header #headerNavBar {
+header #topBarContainer {
   padding: 2rem 2rem;
   position: absolute;
   content: "";
@@ -174,58 +174,61 @@ header #headerNavBar {
 }
 
 @media screen and (min-width: 30rem) {
-  header #headerNavBar {
+  header #topBarContainer {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 }
 
 @media screen and (min-width: 40rem) {
-  header #headerNavBar {
+  header #topBarContainer {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 }
 
 @media screen and (min-width: 50rem) {
-  header #headerNavBar {
+  header #topBarContainer {
     padding-left: 6rem;
     padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
-  header #headerNavBar {
+  header #topBarContainer {
     padding-left: 8rem;
     padding-right: 8rem;
   }
 }
 
 @media screen and (min-width: 75rem) {
-  header #headerNavBar {
+  header #topBarContainer {
     padding-left: 10rem;
     padding-right: 10rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
-  header #headerNavBar {
+  header #topBarContainer {
     margin: 0 auto;
     width: 80rem;
   }
 }
 
 @media screen and (min-width: 50rem) {
-  header #headerNavBar {
-    display: block;
+  header #topBarContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: relative;
     padding: 0;
     top: 0;
+    gap: 1rem;
   }
 }
 
 @media screen and (min-width: 75rem) {
-  header #headerNavBar {
+  header #topBarContainer {
     width: unset;
     margin: unset;
   }

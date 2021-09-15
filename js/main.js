@@ -3,7 +3,7 @@ let backdrop = document.querySelector("#backdrop");
 
 let headerLogo = document.querySelector("#headerLogo");
 let btnToggleMobileMenu = document.querySelector("#btnToggleMobileMenu");
-let headerNavBar = document.querySelector("#headerNavBar");
+let topBarContainer = document.querySelector("#topBarContainer");
 
 let tabMenuH3List = document.querySelector("#tabMenu").querySelectorAll("h3");
 let tabContentList = document
@@ -52,15 +52,15 @@ function toggleMobileMenu() {
 function fadeInMobileNavBar() {
   backdrop.classList.remove("displayNone");
   backdrop.classList.add("fadeIn");
-  headerNavBar.classList.remove("displayNone");
-  headerNavBar.classList.add("fadeIn");
+  topBarContainer.classList.remove("displayNone");
+  topBarContainer.classList.add("fadeIn");
 }
 
 function fadeOutMobileNavBar() {
   backdrop.classList.remove("fadeIn");
   backdrop.classList.add("fadeOut");
-  headerNavBar.classList.remove("fadeIn");
-  headerNavBar.classList.add("fadeOut");
+  topBarContainer.classList.remove("fadeIn");
+  topBarContainer.classList.add("fadeOut");
 
   mobileAnimationTimer = setTimeout(() => {
     setMobileNavBarClosed();
@@ -71,8 +71,8 @@ function fadeOutMobileNavBar() {
 function setMobileNavBarClosed() {
   backdrop.classList.remove("fadeOut");
   backdrop.classList.add("displayNone");
-  headerNavBar.classList.remove("fadeOut");
-  headerNavBar.classList.add("displayNone");
+  topBarContainer.classList.remove("fadeOut");
+  topBarContainer.classList.add("displayNone");
 }
 
 function openSelectedTab(event) {
