@@ -465,7 +465,7 @@ header #btnLogIn:active {
 #title .image::before {
   position: absolute;
   content: "";
-  width: 59rem;
+  width: 80rem;
   height: 11rem;
   bottom: 1rem;
   left: 6rem;
@@ -762,7 +762,7 @@ header #btnLogIn:active {
 #features .image::before {
   position: absolute;
   content: "";
-  width: 60rem;
+  width: 80rem;
   height: 12rem;
   bottom: -1rem;
   right: 0rem;

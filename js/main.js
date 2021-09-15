@@ -30,15 +30,16 @@ function toggleMobileMenu() {
     // schliessen
     body.classList.remove("overflowHidden");
     headerLogo.classList.remove("white");
+    btnToggleMobileMenu.setAttribute("aria-Label", "open   menu");
     btnToggleMobileMenu.style.backgroundImage =
       'url("../images/icon-hamburger.svg")';
     fadeOutMobileNavBar();
     document.querySelector(".socialMedia").classList.remove("mobileMenu");
   } else {
     // aufmachen
-
     body.classList.add("overflowHidden");
     headerLogo.classList.add("white");
+    btnToggleMobileMenu.setAttribute("aria-Label", "close menu");
     btnToggleMobileMenu.style.backgroundImage =
       'url("../images/icon-close.svg")';
     fadeInMobileNavBar();
@@ -116,8 +117,8 @@ function toggleFaqQuestion(event) {
       mySelectedNode = mySelectedNode.parentNode;
     }
   }
-  mySelectedNode.classList.toggle("open");
 
+  mySelectedNode.classList.toggle("open");
   mySelectedParagraph = mySelectedNode.querySelector("p");
 
   if (mySelectedParagraph.style.display === "block") {
@@ -134,12 +135,15 @@ function toggleFaqQuestion(event) {
 
 function checkAndSubmitMail(event) {
   event.preventDefault();
-
   if (
     inputFieldEmail.value &&
     !inputFieldEmail.parentNode.classList.contains("error")
   ) {
-    alert("Thank you. " + inputFieldEmail.value + "has been registered. We will contact you soon.");
+    alert(
+      "Thank you. " +
+        inputFieldEmail.value +
+        "has been registered. We will contact you soon."
+    );
   }
 }
 
@@ -162,20 +166,35 @@ function checkInput() {
   }, 1000);
 }
 
+function closeMobileMenuOnResize() {
+  if (isMobileMenuOpen && window.innerWidth > 800) {
+    toggleMobileMenu();
+  }
+}
+
 function init() {
   btnToggleMobileMenu.addEventListener("click", toggleMobileMenu);
+  btnContact.addEventListener("click", checkAndSubmitMail);
+  inputFieldEmail.addEventListener("keydown", checkInput);
+  window.addEventListener("resize", closeMobileMenuOnResize);
 
   tabMenuH3List.forEach((element) => {
     element.addEventListener("click", openSelectedTab);
+    element.addEventListener("keydown", (event) => {
+      if (event.key == " ") {
+        openSelectedTab(event);
+      }
+    });
   });
 
   questionItems.forEach((element) => {
     element.addEventListener("click", toggleFaqQuestion);
+    element.addEventListener("keydown", (event) => {
+      if (event.key == " ") {
+        toggleFaqQuestion(event);
+      }
+    });
   });
-
-  btnContact.addEventListener("click", checkAndSubmitMail);
-
-  inputFieldEmail.addEventListener("keydown", checkInput);
 }
 
 window.onload = init;
