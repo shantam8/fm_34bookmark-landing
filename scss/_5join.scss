@@ -9,10 +9,15 @@
     text-align: center;
 
     @media screen and (min-width: 40rem) {
-      width: 23.75rem;
+      width: 23rem;
       margin: 0 auto;
       padding-left: 0;
       padding-right: 0;
+    }
+
+    @media screen and (min-width: 60rem) {
+      width: 29rem;
+      margin-top: 3rem;
     }
   }
 
@@ -20,6 +25,8 @@
     font-size: 0.8rem;
     font-weight: 500;
     color: white;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
   }
 
   form {

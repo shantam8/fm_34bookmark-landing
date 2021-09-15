@@ -14,6 +14,10 @@
       }
     }
 
+    @media screen and (min-width: 60rem) {
+      margin-top: 3rem;
+    }
+
     @media screen and (min-width: 70rem) {
       width: 70rem;
       margin: 0 auto;
@@ -28,64 +32,74 @@
       display: flex;
       max-width: 41.875rem;
       margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+  }
+  .tabMenuItem {
+    position: relative;
+    padding: 1rem;
+    border: none;
+    border-top: 1px solid lightgray;
+    font-weight: 400;
+    background-color: transparent;
+
+    &:last-of-type {
+      border-bottom: 1px solid lightgray;
     }
 
-    h3 {
-      position: relative;
-      padding: 1rem;
-      border-top: 1px solid lightgray;
-      font-weight: 400;
+    @media screen and (min-width: 30rem) {
+      width: 26rem;
+      margin: 0 auto;
+      border-top: none;
+      border-bottom: 1px solid lightgray;
+    }
 
-      &:last-of-type {
-        border-bottom: 1px solid lightgray;
-      }
+    @media screen and (min-width: 50rem) {
+      width: 14rem;
+      margin-top: 2rem;
+      border-top: none;
+      border-bottom: 1px solid lightgray;
+      font-size: 0.9rem;
+    }
 
-      @media screen and (min-width: 30rem) {
-        width: 26rem;
-        margin: 0 auto;
-        border-top: none;
-        border-bottom: 1px solid lightgray;
-      }
+    @media screen and (min-width: 50rem) {
+      font-size: 1rem;
+    }
 
-      @media screen and (min-width: 50rem) {
-        width: 14rem;
-        margin-top: 2rem;
-        border-top: none;
-        border-bottom: 1px solid lightgray;
-        font-size: 0.9rem;
-      }
+    @media screen and (min-width: 60rem) {
+      font-size: 1.1rem;
+    }
 
-      @media screen and (min-width: 50rem) {
-        font-size: 1rem;
-      }
+    @media screen and (min-width: 70rem) {
+      font-size: 1.2rem;
+    }
 
-      &.active {
-        &::after {
-          position: absolute;
-          content: "";
-          background-color: $softRed;
-          height: 0.2rem;
-          left: 5rem;
-          right: 5rem;
-          bottom: 0;
+    &.active {
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $softRed;
+        height: 0.2rem;
+        left: 5rem;
+        right: 5rem;
+        bottom: 0;
 
-          @media screen and (min-width: 30rem) {
-            left: 9rem;
-            right: 9rem;
-          }
+        @media screen and (min-width: 30rem) {
+          left: 9rem;
+          right: 9rem;
+        }
 
-          @media screen and (min-width: 50rem) {
-            left: 0;
-            right: 0;
-          }
+        @media screen and (min-width: 50rem) {
+          left: 0;
+          right: 0;
         }
       }
+    }
 
-      &:hover,
-      &:focus {
-        cursor: pointer;
-        font-weight: 500;
-      }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      font-weight: 500;
     }
   }
 
@@ -115,6 +129,9 @@
   .image {
     @include bgBlueBarsBottom;
     position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 36rem;
   }
 
   img {
@@ -133,14 +150,14 @@
     }
 
     p {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
   }
 
-  button {
+  .btnMoreInfo {
     @include btnStyle($softBlue, white);
     display: initial;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }

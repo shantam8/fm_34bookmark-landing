@@ -4,10 +4,17 @@
     padding-bottom: 8rem;
     text-align: center;
 
-    @media screen and(min-width:50rem) {
-      width: 800px;
+    @media screen and(min-width:40rem) {
+      width: 40rem;
       margin: 0 auto;
       padding-bottom: 4rem;
+    }
+
+    @media screen and (min-width: 60rem) {
+      width: 46rem;
+      margin-top: 3rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
     }
   }
 
@@ -20,12 +27,29 @@
     padding: 0.5rem 0;
     border-bottom: 1px solid lightgray;
 
+    &:first-of-type {
+      border-top: 1px solid lightgray;
+    }
+
+    @media screen and (min-width: 60rem) {
+      padding: 1rem 0;
+    }
+
     p {
       display: none;
       max-height: 0px;
       text-align: left;
       overflow: hidden;
       transition: all 0.2s ease-out;
+      font-size: 0.8rem;
+
+      @media screen and (min-width: 60rem) {
+        font-size: 0.9rem;
+      }
+
+      @media screen and (min-width: 70rem) {
+        font-size: 1rem;
+      }
     }
 
     &:hover,
@@ -43,9 +67,19 @@
       }
     }
 
-    h3 {
+    .btnFaqItem {
       font-size: 0.9rem;
       font-weight: 400;
+      border: none;
+      background-color: transparent;
+
+      @media screen and (min-width: 60rem) {
+        font-size: 1rem;
+      }
+
+      @media screen and (min-width: 70rem) {
+        font-size: 1.2rem;
+      }
     }
 
     svg {
@@ -60,7 +94,7 @@
     }
   }
 
-  button {
+  .btnMoreInfo {
     @include btnStyle($softBlue, white);
     margin-top: 3rem;
   }

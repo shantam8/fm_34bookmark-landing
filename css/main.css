@@ -100,29 +100,24 @@ header .bgHelper {
 
 @media screen and (min-width: 50rem) {
   header .bgHelper {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   header .bgHelper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  header .bgHelper {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   header .bgHelper {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
@@ -141,6 +136,13 @@ header .logo.white svg g g circle {
 
 header .logo.white svg g g path {
   fill: #252b46;
+}
+
+@media screen and (min-width: 70rem) {
+  header svg {
+    width: 12rem;
+    height: 2rem;
+  }
 }
 
 header #btnToggleMobileMenu {
@@ -189,29 +191,24 @@ header #topBarContainer {
 
 @media screen and (min-width: 50rem) {
   header #topBarContainer {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   header #topBarContainer {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  header #topBarContainer {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   header #topBarContainer {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
@@ -224,6 +221,12 @@ header #topBarContainer {
     padding: 0;
     top: 0;
     gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  header #topBarContainer {
+    gap: 3rem;
   }
 }
 
@@ -248,6 +251,12 @@ header #topBarContainer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  header ul {
+    gap: 3rem;
   }
 }
 
@@ -297,6 +306,18 @@ header a:active {
   }
 }
 
+@media screen and (min-width: 60rem) {
+  header a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  header a {
+    font-size: 1.2rem;
+  }
+}
+
 header #btnLogIn {
   padding: 1rem 1rem;
   border: none;
@@ -311,7 +332,7 @@ header #btnLogIn {
   padding: 0.8rem 0;
   width: 100%;
   border: 2px solid white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in-out;
@@ -373,6 +394,18 @@ header #btnLogIn:active {
   }
 }
 
+@media screen and (min-width: 60rem) {
+  header #btnLogIn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  header #btnLogIn {
+    font-size: 1.2rem;
+  }
+}
+
 #title .bgHelper {
   padding: 2rem 2rem;
   padding-bottom: 8rem;
@@ -394,29 +427,24 @@ header #btnLogIn:active {
 
 @media screen and (min-width: 50rem) {
   #title .bgHelper {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   #title .bgHelper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  #title .bgHelper {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   #title .bgHelper {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
@@ -446,6 +474,12 @@ header #btnLogIn:active {
   }
 }
 
+@media screen and (min-width: 60rem) {
+  #title .bgHelper {
+    margin-top: 3rem;
+  }
+}
+
 #title .titleBox {
   margin-top: 2rem;
 }
@@ -462,51 +496,20 @@ header #btnLogIn:active {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 30rem;
+  max-width: 36rem;
 }
 
 #title .image::before {
   position: absolute;
   content: "";
   width: 80rem;
-  height: 11rem;
+  height: 75%;
   bottom: 1rem;
-  left: 6rem;
+  left: 20%;
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
   background-color: #5368df;
   z-index: -1;
-}
-
-@media screen and (min-width: 30rem) {
-  #title .image::before {
-    height: 14rem;
-    left: 3rem;
-    border-top-left-radius: 7rem;
-    border-bottom-left-radius: 7rem;
-  }
-}
-
-@media screen and (min-width: 40rem) {
-  #title .image::before {
-    height: 16rem;
-    border-top-left-radius: 8rem;
-    border-bottom-left-radius: 8rem;
-  }
-}
-
-@media screen and (min-width: 50rem) {
-  #title .image::before {
-    height: 12rem;
-    border-top-left-radius: 6rem;
-    border-bottom-left-radius: 6rem;
-  }
-}
-
-@media screen and (min-width: 64rem) {
-  #title .image::before {
-    height: 16rem;
-  }
 }
 
 #title img {
@@ -597,29 +600,24 @@ header #btnLogIn:active {
 
 @media screen and (min-width: 50rem) {
   #features .bgHelper {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   #features .bgHelper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  #features .bgHelper {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   #features .bgHelper {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
@@ -632,6 +630,12 @@ header #btnLogIn:active {
     margin: 0 auto;
     border-left: 2rem;
     border-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #features .bgHelper {
+    margin-top: 3rem;
   }
 }
 
@@ -654,22 +658,25 @@ header #btnLogIn:active {
     display: flex;
     max-width: 41.875rem;
     margin: 0 auto;
+    margin-bottom: 2rem;
   }
 }
 
-#features #tabMenu h3 {
+#features .tabMenuItem {
   position: relative;
   padding: 1rem;
+  border: none;
   border-top: 1px solid lightgray;
   font-weight: 400;
+  background-color: transparent;
 }
 
-#features #tabMenu h3:last-of-type {
+#features .tabMenuItem:last-of-type {
   border-bottom: 1px solid lightgray;
 }
 
 @media screen and (min-width: 30rem) {
-  #features #tabMenu h3 {
+  #features .tabMenuItem {
     width: 26rem;
     margin: 0 auto;
     border-top: none;
@@ -678,7 +685,7 @@ header #btnLogIn:active {
 }
 
 @media screen and (min-width: 50rem) {
-  #features #tabMenu h3 {
+  #features .tabMenuItem {
     width: 14rem;
     margin-top: 2rem;
     border-top: none;
@@ -688,12 +695,24 @@ header #btnLogIn:active {
 }
 
 @media screen and (min-width: 50rem) {
-  #features #tabMenu h3 {
+  #features .tabMenuItem {
     font-size: 1rem;
   }
 }
 
-#features #tabMenu h3.active::after {
+@media screen and (min-width: 60rem) {
+  #features .tabMenuItem {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  #features .tabMenuItem {
+    font-size: 1.2rem;
+  }
+}
+
+#features .tabMenuItem.active::after {
   position: absolute;
   content: "";
   background-color: #fa5757;
@@ -704,20 +723,20 @@ header #btnLogIn:active {
 }
 
 @media screen and (min-width: 30rem) {
-  #features #tabMenu h3.active::after {
+  #features .tabMenuItem.active::after {
     left: 9rem;
     right: 9rem;
   }
 }
 
 @media screen and (min-width: 50rem) {
-  #features #tabMenu h3.active::after {
+  #features .tabMenuItem.active::after {
     left: 0;
     right: 0;
   }
 }
 
-#features #tabMenu h3:hover, #features #tabMenu h3:focus {
+#features .tabMenuItem:hover, #features .tabMenuItem:focus {
   cursor: pointer;
   font-weight: 500;
 }
@@ -760,44 +779,22 @@ header #btnLogIn:active {
 
 #features .image {
   position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 36rem;
 }
 
 #features .image::before {
   position: absolute;
   content: "";
   width: 80rem;
-  height: 12rem;
-  bottom: -1rem;
-  right: 0rem;
+  height: 75%;
+  bottom: -2rem;
+  right: 20%;
   border-top-right-radius: 6rem;
   border-bottom-right-radius: 6rem;
   background-color: #5368df;
   z-index: -1;
-}
-
-@media screen and (min-width: 30rem) {
-  #features .image::before {
-    height: 14rem;
-    right: 3rem;
-    border-top-left-radius: 7rem;
-    border-bottom-left-radius: 7rem;
-  }
-}
-
-@media screen and (min-width: 40rem) {
-  #features .image::before {
-    height: 16rem;
-    border-top-left-radius: 8rem;
-    border-bottom-left-radius: 8rem;
-  }
-}
-
-@media screen and (min-width: 50rem) {
-  #features .image::before {
-    height: 12rem;
-    border-top-left-radius: 6rem;
-    border-bottom-left-radius: 6rem;
-  }
 }
 
 #features img {
@@ -819,10 +816,10 @@ header #btnLogIn:active {
 }
 
 #features .textBlock p {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
-#features button {
+#features .btnMoreInfo {
   padding: 1rem 1rem;
   border: none;
   border-radius: 4px;
@@ -833,12 +830,12 @@ header #btnLogIn:active {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   display: initial;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-#features button:hover, #features button:focus {
+#features .btnMoreInfo:hover, #features .btnMoreInfo:focus {
   cursor: pointer;
   background-color: white;
   -webkit-box-shadow: none;
@@ -847,7 +844,7 @@ header #btnLogIn:active {
   color: #5368df;
 }
 
-#features button:active {
+#features .btnMoreInfo:active {
   background-color: #5368df;
   color: white;
 }
@@ -873,35 +870,43 @@ header #btnLogIn:active {
 
 @media screen and (min-width: 50rem) {
   #download .bgHelper {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   #download .bgHelper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  #download .bgHelper {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   #download .bgHelper {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
 @media screen and (min-width: 50rem) {
   #download .bgHelper {
     padding-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #download .bgHelper {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  #download .titleBox {
+    width: 40rem;
+    margin: 0 auto;
   }
 }
 
@@ -923,9 +928,12 @@ header #btnLogIn:active {
   }
 }
 
-@media screen and (min-width: 68rem) {
+@media screen and (min-width: 64rem) {
   #download .cardBox {
-    height: 26rem;
+    height: 30rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -968,11 +976,12 @@ header #btnLogIn:active {
 
 #download .card h3 {
   margin-top: 2rem;
+  font-size: 1.6rem;
 }
 
 #download .card p {
   margin-top: 0.5rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 #download button {
@@ -987,6 +996,7 @@ header #btnLogIn:active {
   transition: 0.2s ease-in-out;
   margin-top: 4rem;
   width: 100%;
+  font-size: 0.8rem;
 }
 
 #download button:hover, #download button:focus {
@@ -1025,37 +1035,41 @@ header #btnLogIn:active {
 
 @media screen and (min-width: 50rem) {
   #faq .bgHelper {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   #faq .bgHelper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  #faq .bgHelper {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   #faq .bgHelper {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 40rem) {
   #faq .bgHelper {
-    width: 800px;
+    width: 40rem;
     margin: 0 auto;
     padding-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #faq .bgHelper {
+    width: 46rem;
+    margin-top: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
@@ -1069,6 +1083,16 @@ header #btnLogIn:active {
   border-bottom: 1px solid lightgray;
 }
 
+#faq .questionItem:first-of-type {
+  border-top: 1px solid lightgray;
+}
+
+@media screen and (min-width: 60rem) {
+  #faq .questionItem {
+    padding: 1rem 0;
+  }
+}
+
 #faq .questionItem p {
   display: none;
   max-height: 0px;
@@ -1076,6 +1100,19 @@ header #btnLogIn:active {
   overflow: hidden;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 60rem) {
+  #faq .questionItem p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  #faq .questionItem p {
+    font-size: 1rem;
+  }
 }
 
 #faq .questionItem:hover, #faq .questionItem:focus {
@@ -1091,9 +1128,23 @@ header #btnLogIn:active {
   stroke: red;
 }
 
-#faq .questionItem h3 {
+#faq .questionItem .btnFaqItem {
   font-size: 0.9rem;
   font-weight: 400;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 60rem) {
+  #faq .questionItem .btnFaqItem {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  #faq .questionItem .btnFaqItem {
+    font-size: 1.2rem;
+  }
 }
 
 #faq .questionItem svg {
@@ -1114,7 +1165,7 @@ header #btnLogIn:active {
           align-items: center;
 }
 
-#faq button {
+#faq .btnMoreInfo {
   padding: 1rem 1rem;
   border: none;
   border-radius: 4px;
@@ -1127,7 +1178,7 @@ header #btnLogIn:active {
   margin-top: 3rem;
 }
 
-#faq button:hover, #faq button:focus {
+#faq .btnMoreInfo:hover, #faq .btnMoreInfo:focus {
   cursor: pointer;
   background-color: white;
   -webkit-box-shadow: none;
@@ -1136,7 +1187,7 @@ header #btnLogIn:active {
   color: #5368df;
 }
 
-#faq button:active {
+#faq .btnMoreInfo:active {
   background-color: #5368df;
   color: white;
 }
@@ -1169,38 +1220,40 @@ header #btnLogIn:active {
 
 @media screen and (min-width: 50rem) {
   #join .bgHelper {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   #join .bgHelper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  #join .bgHelper {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   #join .bgHelper {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
 @media screen and (min-width: 40rem) {
   #join .bgHelper {
-    width: 23.75rem;
+    width: 23rem;
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #join .bgHelper {
+    width: 29rem;
+    margin-top: 3rem;
   }
 }
 
@@ -1208,6 +1261,8 @@ header #btnLogIn:active {
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
 }
 
 #join form {
@@ -1327,29 +1382,24 @@ footer .bgHelper {
 
 @media screen and (min-width: 50rem) {
   footer .bgHelper {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media screen and (min-width: 60rem) {
   footer .bgHelper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  footer .bgHelper {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
   footer .bgHelper {
+    padding-left: 0rem;
+    padding-right: 0rem;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
   }
 }
 
@@ -1512,11 +1562,59 @@ h3 {
   font-weight: 500;
 }
 
+@media screen and (min-width: 60rem) {
+  h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
 p {
   color: #9194a1;
   font-weight: 400;
   font-size: 0.95rem;
   line-height: 1.625rem;
+}
+
+@media screen and (min-width: 60rem) {
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  p {
+    font-size: 1.2rem;
+  }
 }
 
 ul {
@@ -1531,6 +1629,12 @@ a {
 
 button {
   font-weight: 500;
+}
+
+@media screen and (min-width: 70rem) {
+  button {
+    font-size: 1.2rem;
+  }
 }
 
 .tab {

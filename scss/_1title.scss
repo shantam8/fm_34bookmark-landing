@@ -18,6 +18,10 @@
         padding: 1rem 1.5rem;
       }
     }
+
+    @media screen and (min-width: 60rem) {
+      margin-top: 3rem;
+    }
   }
 
   .titleBox {
@@ -35,7 +39,7 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    max-width: 30rem;
+    max-width: 36rem;
   }
 
   img {

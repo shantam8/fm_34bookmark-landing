@@ -33,16 +33,56 @@ h3 {
   font-weight: 500;
 }
 
+h1{
+  @media screen and (min-width: 60rem) {
+    font-size: 2.7rem;
+  }
+
+  @media screen and (min-width: 70rem) {
+    font-size: 3rem;
+  }
+}
+
+h2{
+  @media screen and (min-width: 60rem) {
+    font-size: 2.2rem;
+  }
+
+  @media screen and (min-width: 70rem) {
+    font-size: 2.5rem;
+  }
+}
+
+h3{
+
+  @media screen and (min-width: 60rem) {
+    font-size: 1.7rem;
+  }
+
+  @media screen and (min-width: 70rem) {
+    font-size: 2rem;
+  }
+}
+
 p {
   color: $grayishBlue;
   font-weight: 400;
   font-size: 0.95rem;
   line-height: 1.625rem;
+
+  @media screen and (min-width: 60rem) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (min-width: 70rem) {
+    font-size: 1.2rem;
+  }
 }
 
 ul {
   list-style: none;
 }
+
 
 a {
   text-decoration: none;
@@ -52,6 +92,10 @@ a {
 
 button {
   font-weight: 500;
+
+  @media screen and (min-width:70rem) {
+    font-size: 1.2rem;
+  }
 }
 
 .tab {

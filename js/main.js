@@ -5,7 +5,7 @@ let headerLogo = document.querySelector("#headerLogo");
 let btnToggleMobileMenu = document.querySelector("#btnToggleMobileMenu");
 let topBarContainer = document.querySelector("#topBarContainer");
 
-let tabMenuH3List = document.querySelector("#tabMenu").querySelectorAll("h3");
+let tabMenuItemList = document.querySelector("#tabMenu").querySelectorAll(".tabMenuItem");
 let tabContentList = document
   .querySelector("#tabContent")
   .querySelectorAll(".tab");
@@ -76,7 +76,7 @@ function setMobileNavBarClosed() {
 }
 
 function openSelectedTab(event) {
-  tabMenuH3List.forEach((element) => {
+  tabMenuItemList.forEach((element) => {
     element.classList.remove("active");
   });
   event.target.classList.add("active");
@@ -178,19 +178,20 @@ function init() {
   inputFieldEmail.addEventListener("keydown", checkInput);
   window.addEventListener("resize", closeMobileMenuOnResize);
 
-  tabMenuH3List.forEach((element) => {
+  tabMenuItemList.forEach((element) => {
     element.addEventListener("click", openSelectedTab);
-    element.addEventListener("keydown", (event) => {
-      if (event.key == " ") {
-        openSelectedTab(event);
-      }
-    });
+    // element.addEventListener("keydown", (event) => {
+    //   if (event.key == " ") {
+    //     openSelectedTab(event);
+    //   }
+    // });
   });
 
   questionItems.forEach((element) => {
     element.addEventListener("click", toggleFaqQuestion);
     element.addEventListener("keydown", (event) => {
       if (event.key == " ") {
+        event.preventDefault();
         toggleFaqQuestion(event);
       }
     });
