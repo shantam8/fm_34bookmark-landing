@@ -32,7 +32,7 @@ function toggleMobileMenu() {
     headerLogo.classList.remove("white");
     btnToggleMobileMenu.setAttribute("aria-Label", "open   menu");
     btnToggleMobileMenu.style.backgroundImage =
-      'url("../images/icon-hamburger.svg")';
+      'url("./images/icon-hamburger.svg")';
     fadeOutMobileNavBar();
     document.querySelector(".socialMedia").classList.remove("mobileMenu");
   } else {
@@ -41,7 +41,7 @@ function toggleMobileMenu() {
     headerLogo.classList.add("white");
     btnToggleMobileMenu.setAttribute("aria-Label", "close menu");
     btnToggleMobileMenu.style.backgroundImage =
-      'url("../images/icon-close.svg")';
+      'url("./images/icon-close.svg")';
     fadeInMobileNavBar();
     document.querySelector(".socialMedia").classList.add("mobileMenu");
   }

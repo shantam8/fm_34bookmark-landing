@@ -406,6 +406,13 @@ header #btnLogIn:active {
   }
 }
 
+#test {
+  width: 20px;
+  height: 20px;
+  padding: 1rem;
+  background-color: gray;
+}
+
 #title .bgHelper {
   padding: 2rem 2rem;
   padding-bottom: 8rem;
